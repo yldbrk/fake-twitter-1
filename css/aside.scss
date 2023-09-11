@@ -1,0 +1,98 @@
+aside {
+  flex: 1;
+  display: none;
+  max-width: 400px;
+  // background-color: red;
+  flex-direction: column;
+  padding-inline-start: 2rem;
+  padding-block-start: 1rem;
+  gap: 3rem;
+  .search {
+    display: flex;
+    border: none;
+    background-color: #202327;
+    // background-color: red;
+    border-radius: 100px;
+    padding-inline-start: 1rem;
+    display: flex;
+    input {
+      flex: 1;
+      border-radius: 100px;
+      background-color: #202327;
+      // background-color: red;
+      border: none;
+      height: 4rem;
+      outline: none;
+      text-indent: 1rem;
+      color: var(--light-text);
+    }
+  }
+
+  .to-follow {
+    display: flex;
+    flex-direction: column;
+    background-color: #202327;
+    // padding: 1rem;
+    border-radius: 20px;
+    padding-block-start: 2rem;
+    overflow: hidden;
+    gap: 1rem;
+
+    .section-title {
+      font-weight: 800;
+      font-size: 2rem;
+      padding-inline-start: 1.5rem;
+    }
+    .user {
+      overflow: hidden;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      padding-block: 1rem;
+      cursor: pointer;
+      // border-radius: 20px;
+      &:hover {
+        background-color: var(--hover-bg-color);
+      }
+      .col:first-child {
+        padding-inline-start: 1.5rem;
+        img {
+          max-width: 4rem;
+        }
+      }
+      .col:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+      }
+      .col .handler {
+        color: var(--gray-text);
+      }
+      .col:last-child {
+        flex: 1;
+        // background-color: red;
+        padding-inline-end: 1.5rem;
+        display: flex;
+        justify-content: flex-end;
+        // align-items: center;
+        // justify-content: center;
+        button {
+          color: #0f1419;
+          font-size: 1.4rem;
+          font-weight: 700;
+          border: none;
+          background-color: #d7dbdc;
+          border-radius: 100px;
+          padding-inline: 2rem;
+          padding-block: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1018px) {
+  aside {
+    display: flex;
+  }
+}

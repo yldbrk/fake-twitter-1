@@ -1,0 +1,31 @@
+@mixin tabs {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+  .tab {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--hover-bg-color);
+    }
+    span {
+      display: inline;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      padding-block: 2rem;
+      // background-color: blue;
+      height: 100%;
+      justify-content: center;
+      position: relative;
+      color: var(--light-text);
+      font-weight: 500;
+    }
+  }
+  .tab.active span {
+    border-bottom: 3px solid var(--twitter-color);
+  }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      html {
+        font-size: 62.5%;
+        height: 100%;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: var(--light-text);
+      }
+      body {
+        height: 100%;
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+        background-color: #000;
+        color: var(--light-text);
+        font-weight: 400;
+      }
+
+      :root {
+        --twitter-color: rgba(74, 153, 233, 1);
+        --light-text: rgba(231, 233, 234, 1);
+        --gray-text: rgba(114, 118, 122, 1);
+        --border-color: rgba(48, 51, 54, 1);
+        --hover-bg-color: rgba(24, 24, 24, 1);
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- nav -->
+      <nav class="sm md">
+        <a href="" class="logo">
+          <img src="img/svg/logo.svg" alt="" />
+        </a>
+        <a href="" class="active">
+          <img src="img/svg/home.svg" alt="" />
+          <span>Anasayfa</span>
+        </a>
+        <a href="">
+          <img src="img/svg/search-menu.svg" alt="" />
+          <span>Keşfet</span>
+        </a>
+        <a href="">
+          <img src="img/svg/notifications.svg" alt="" />
+          <span>Bildirimler</span>
+        </a>
+        <a href="">
+          <img src="img/svg/messages.svg" alt="" />
+          <span>Mesajlar</span>
+        </a>
+        <div class="send-tweet">
+          <img src="img/svg/send-tweet.svg" alt="" />
+          <span>Gönder</span>
+        </div>
+        <div class="user">
+          <div class="col">
+            <img src="img/pp.png" alt="" />
+          </div>
+          <div class="col">
+            <span class="username">Tutkumuz</span>
+            <span class="handler">@tgdfs</span>
+          </div>
+        </div>
+      </nav>
+      <!-- nav ### -->
+      <header>
+        <div class="user-picture">
+          <img src="img/pp.png" alt="" />
+        </div>
+        <div class="logo">
+          <img src="img/svg/logo.svg" alt="" />
+        </div>
+      </header>
+      <main>
+        <div class="page-title">Anasayfa</div>
+        <div class="tabs">
+          <div class="tab">
+            <span>For You</span>
+          </div>
+          <div class="tab active">
+            <span>Following</span>
+          </div>
+        </div>
+        <section class="tweets">
+          <div class="tweet">
+            <div class="col">
+              <img src="img/pp.png" alt="" />
+            </div>
+            <div class="col">
+              <div class="user">
+                <span class="username">Tutkumuz</span>
+                <span class="handler">@tutkumuzf1</span>
+                <span class="date">13d</span>
+              </div>
+              <div class="content">
+                <span class="text"
+                  >ABD'nin Florida eyaletinde bulunan Pompano Plajı'nda, polis
+                  helikopteri düştü.</span
+                >
+                <img src="img/content.jpeg" alt="" class="tweet-image" />
+              </div>
+              <div class="buttons">
+                <div class="button responses">
+                  <img src="img/svg/response.svg" alt="" />
+                  <span>3</span>
+                </div>
+                <div class="button retweets">
+                  <img src="img/svg/retweet.svg" alt="" />
+                  <span>3</span>
+                </div>
+                <div class="button likes">
+                  <img src="img/svg/like.svg" alt="" />
+                  <span>3</span>
+                </div>
+                <div class="button views">
+                  <img src="img/svg/views.svg" alt="" />
+                  <span>3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <aside>
+        <div class="search">
+          <img src="img/svg/search-input.svg" alt="" />
+          <input type="text" />
+        </div>
+        <div class="to-follow">
+          <div class="section-title">Kimi takip etmeli</div>
+          <div class="user">
+            <div class="col">
+              <img src="img/pp.png" alt="" />
+            </div>
+            <div class="col">
+              <span class="username">Tutkumuz</span>
+              <span class="handler">@tutkumuz</span>
+            </div>
+            <div class="col">
+              <button>Takip Et</button>
+            </div>
+          </div>
+          <div class="user">
+            <div class="col">
+              <img src="img/pp.png" alt="" />
+            </div>
+            <div class="col">
+              <span class="username">Tutkumuz</span>
+              <span class="handler">@tutkumuz</span>
+            </div>
+            <div class="col">
+              <button>Takip Et</button>
+            </div>
+          </div>
+          <div class="user">
+            <div class="col">
+              <img src="img/pp.png" alt="" />
+            </div>
+            <div class="col">
+              <span class="username">Tutkumuz</span>
+              <span class="handler">@tutkumuz</span>
+            </div>
+            <div class="col">
+              <button>Takip Et</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script>
+      const el = document.querySelector(".user-picture");
+      document.addEventListener("scroll", event => {});
+    </script>
+  </body>
+</html>

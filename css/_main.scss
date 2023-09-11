@@ -1,0 +1,48 @@
+@import "./tabs";
+@import "./tweets";
+
+header {
+  display: flex;
+  padding-block-start: 1rem;
+  align-items: center;
+  flex-direction: column;
+  .user-picture {
+    position: absolute;
+    left: 1.5rem;
+    img {
+      max-width: 3rem;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .page-title {
+    display: none;
+    padding-block-start: 1.6rem;
+    padding-inline-start: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--light-text);
+  }
+  .tabs {
+    @include tabs;
+  }
+  section.tweets {
+    @include tweets;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .page-title {
+    display: inline !important;
+  }
+}
+
+@media screen and (min-width: 667px) {
+  main {
+    border-right: 1px solid var(--border-color);
+  }
+}

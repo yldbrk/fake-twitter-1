@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  // background-color: blue;
+}
+
+@media screen and (min-width: 500px) {
+  .wrapper {
+    flex-direction: row;
+    max-width: calc(600px + 6rem);
+    // background-color: pink;
+  }
+}
+
+@media screen and (min-width: 1018px) {
+  .wrapper {
+    // background-color: green;
+    max-width: 1024px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    max-width: 1260px;
+  }
+}

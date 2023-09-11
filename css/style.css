@@ -1,0 +1,396 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 500px) {
+  .wrapper {
+    flex-direction: row;
+    max-width: calc(600px + 6rem);
+  }
+}
+@media screen and (min-width: 1018px) {
+  .wrapper {
+    max-width: 1024px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    max-width: 1260px;
+  }
+}
+nav.sm {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: black;
+  padding-block: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2rem;
+}
+nav.sm span {
+  display: none;
+}
+nav.sm .logo {
+  display: none;
+}
+nav.sm .send-tweet {
+  position: absolute;
+  bottom: 7rem;
+  right: 1rem;
+  background-color: var(--twitter-color);
+  width: 5rem !important;
+  height: 5rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 100%;
+}
+nav.sm .user {
+  display: none;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+nav.sm .user .col:first-child img {
+  max-width: 4rem;
+}
+nav.sm .user .col:last-child {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  nav.md {
+    position: sticky;
+    top: 0;
+    width: 6rem;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    border-right: 1px solid var(--border-color);
+    align-items: center;
+  }
+  nav.md .user {
+    display: flex;
+  }
+  nav.md .logo {
+    display: flex;
+  }
+  nav.md .send-tweet {
+    position: static;
+  }
+  nav.md a {
+    border-radius: 100%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 200ms ease;
+  }
+  nav.md a:not(.logo):hover {
+    background-color: var(--hover-bg-color);
+  }
+  nav.md .logo img {
+    width: 3rem;
+  }
+  header {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  nav.md {
+    padding-inline-end: 10rem;
+    align-items: baseline;
+    width: fit-content;
+  }
+  nav.md .user {
+    justify-content: flex-start;
+    padding-inline-start: 2rem;
+    gap: 1rem;
+    flex-direction: row;
+    padding-block: 1rem !important;
+    border-radius: 100px;
+    transition: background-color 200ms ease;
+  }
+  nav.md .user:hover {
+    background-color: var(--hover-bg-color);
+  }
+  nav.md .user .col:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  nav.md .user .col:last-child .username {
+    font-weight: 700;
+  }
+  nav.md .user .col:last-child .handler {
+    color: var(--gray-text);
+  }
+  nav.md span {
+    display: inline;
+  }
+  nav.md .send-tweet {
+    min-width: 20rem !important;
+    background-color: 100%;
+    height: auto;
+    padding-block: 1.7rem;
+    border-radius: 100px;
+    height: auto;
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+  nav.md .send-tweet img {
+    display: none;
+  }
+  nav.md a {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    font-size: 2rem;
+    width: auto;
+    height: auto;
+    border-radius: 100px;
+    padding-inline-start: 2rem;
+    padding-inline-end: 3rem;
+    padding-block: 1.35rem;
+  }
+  nav.md a img:not(.logo img) {
+    max-width: 3rem;
+    max-height: 4rem;
+  }
+  nav.md a span {
+    color: #fff;
+    text-decoration: none;
+    padding-inline-start: 2rem;
+  }
+  nav.md a.active {
+    font-weight: bold;
+  }
+}
+header {
+  display: flex;
+  padding-block-start: 1rem;
+  align-items: center;
+  flex-direction: column;
+}
+header .user-picture {
+  position: absolute;
+  left: 1.5rem;
+}
+header .user-picture img {
+  max-width: 3rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .page-title {
+  display: none;
+  padding-block-start: 1.6rem;
+  padding-inline-start: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--light-text);
+}
+main .tabs {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+}
+main .tabs .tab {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+main .tabs .tab:hover {
+  background-color: var(--hover-bg-color);
+}
+main .tabs .tab span {
+  display: inline;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding-block: 2rem;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  color: var(--light-text);
+  font-weight: 500;
+}
+main .tabs .tab.active span {
+  border-bottom: 3px solid var(--twitter-color);
+}
+main section.tweets {
+  display: flex !important;
+  width: 100%;
+  padding-inline: 1rem;
+  padding-block-start: 1rem;
+  gap: 2rem;
+  max-width: 600px;
+  flex-direction: column;
+}
+main section.tweets .tweet {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+main section.tweets .tweet .col:first-child img {
+  max-width: 4rem;
+}
+main section.tweets .tweet .col:last-child {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main section.tweets .tweet .col:last-child .user {
+  display: flex;
+  gap: 1rem;
+}
+main section.tweets .tweet .col:last-child .user .username {
+  font-weight: 700;
+}
+main section.tweets .tweet .col:last-child .user .handler,
+main section.tweets .tweet .col:last-child .user .date {
+  color: var(--gray-text);
+}
+main section.tweets .tweet .col:last-child .content {
+  display: flex;
+  flex-direction: column;
+}
+main section.tweets .tweet .col:last-child .content img {
+  margin-block-start: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+main section.tweets .tweet .col:last-child .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-start: 0.5rem;
+  padding-inline: 1.2rem;
+}
+main section.tweets .tweet .col:last-child .buttons .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.3rem;
+  color: var(--gray-text);
+}
+
+@media screen and (min-width: 500px) {
+  .page-title {
+    display: inline !important;
+  }
+}
+@media screen and (min-width: 667px) {
+  main {
+    border-right: 1px solid var(--border-color);
+  }
+}
+aside {
+  flex: 1;
+  display: none;
+  max-width: 400px;
+  flex-direction: column;
+  padding-inline-start: 2rem;
+  padding-block-start: 1rem;
+  gap: 3rem;
+}
+aside .search {
+  display: flex;
+  border: none;
+  background-color: #202327;
+  border-radius: 100px;
+  padding-inline-start: 1rem;
+  display: flex;
+}
+aside .search input {
+  flex: 1;
+  border-radius: 100px;
+  background-color: #202327;
+  border: none;
+  height: 4rem;
+  outline: none;
+  text-indent: 1rem;
+  color: var(--light-text);
+}
+aside .to-follow {
+  display: flex;
+  flex-direction: column;
+  background-color: #202327;
+  border-radius: 20px;
+  padding-block-start: 2rem;
+  overflow: hidden;
+  gap: 1rem;
+}
+aside .to-follow .section-title {
+  font-weight: 800;
+  font-size: 2rem;
+  padding-inline-start: 1.5rem;
+}
+aside .to-follow .user {
+  overflow: hidden;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1rem;
+  cursor: pointer;
+}
+aside .to-follow .user:hover {
+  background-color: var(--hover-bg-color);
+}
+aside .to-follow .user .col:first-child {
+  padding-inline-start: 1.5rem;
+}
+aside .to-follow .user .col:first-child img {
+  max-width: 4rem;
+}
+aside .to-follow .user .col:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+aside .to-follow .user .col .handler {
+  color: var(--gray-text);
+}
+aside .to-follow .user .col:last-child {
+  flex: 1;
+  padding-inline-end: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+aside .to-follow .user .col:last-child button {
+  color: #0f1419;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border: none;
+  background-color: #d7dbdc;
+  border-radius: 100px;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+}
+
+@media screen and (min-width: 1018px) {
+  aside {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
